@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vladm\\Desktop\\ASP.MVC\\ASPMVC\\ASPMVC.csproj": {}
+    "C:\\Users\\vladm\\Desktop\\Github\\ASP.net-MVC\\ASP.net-MVC\\ASPMVC\\ASPMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vladm\\Desktop\\ASP.MVC\\ASPMVC\\ASPMVC.csproj": {
+    "C:\\Users\\vladm\\Desktop\\Github\\ASP.net-MVC\\ASP.net-MVC\\ASPMVC\\ASPMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vladm\\Desktop\\ASP.MVC\\ASPMVC\\ASPMVC.csproj",
+        "projectUniqueName": "C:\\Users\\vladm\\Desktop\\Github\\ASP.net-MVC\\ASP.net-MVC\\ASPMVC\\ASPMVC.csproj",
         "projectName": "ASPMVC",
-        "projectPath": "C:\\Users\\vladm\\Desktop\\ASP.MVC\\ASPMVC\\ASPMVC.csproj",
+        "projectPath": "C:\\Users\\vladm\\Desktop\\Github\\ASP.net-MVC\\ASP.net-MVC\\ASPMVC\\ASPMVC.csproj",
         "packagesPath": "C:\\Users\\vladm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vladm\\Desktop\\ASP.MVC\\ASPMVC\\obj\\",
+        "outputPath": "C:\\Users\\vladm\\Desktop\\Github\\ASP.net-MVC\\ASP.net-MVC\\ASPMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vladm\\AppData\\Roaming\\NuGet\\NuGet.Config",
