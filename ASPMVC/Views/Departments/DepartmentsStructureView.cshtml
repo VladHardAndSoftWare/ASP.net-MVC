@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ASPMVC.Models.Department>
+
+@{
+    ViewData["Title"] = "DepartmentsStructureView";
+}
+
+
+<ul>
+    @foreach (var department in Model)
+    {
+        if (department.ParentDepartmentId == null)
+        {
+            <li>@department.Name @department.Code</li>
+            DisplayChildren(department.Id);
+        }
+    }
+</ul>
+
+@functions
+{
+    private void DisplayChildren(Guid parentId)
+    {
+        var children = Model.Where(d => d.ParentDepartmentId == parentId);
+        if (!children.Any())
+        {
+            return;
+        }
+
+        <ul>
+            @foreach (var child in children)
+            {
+                <li>@child.Name @child.Code</li>
+                DisplayChildren(child.Id);
+            }
+        </ul>
+    }
+}

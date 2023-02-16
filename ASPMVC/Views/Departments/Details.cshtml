@@ -1,0 +1,38 @@
+﻿@model ASPMVC.Models.Department
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div>
+    <a asp-action="Index" class="btn btn-outline-info btn-sm">👈Вернуться</a>
+</div>
+</br>
+<h1>Детали</h1>
+
+<div>
+    <h4>Департамент</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParentDepartment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParentDepartment.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-outline-primary">✏ Изменить</a>
+</div>

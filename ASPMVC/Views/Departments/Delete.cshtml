@@ -1,0 +1,41 @@
+﻿@model ASPMVC.Models.Department
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<div>
+    <a asp-action="Index" class="btn btn-outline-info btn-sm">👈Вернуться</a>
+</div>
+</br>
+<h1>Удаление</h1>
+
+<h3>Вы уверены что хотите удалить депратемнт?</h3>
+<div>
+    <h4>Департамент</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParentDepartment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParentDepartment.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="🔥 Удалить" class="btn btn-danger" />
+    </form>
+</div>

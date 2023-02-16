@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ASPMVC.Models.Empoyee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Сотрудники</h1>
+
+<p>
+    <a asp-action="Create"class="btn btn-success btn-sm">Добавить сотрудника</a>
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patronymic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSeries)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patronymic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocSeries)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.Id)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><span class="badge rounded-pill bg-primary">Изменить</span></a> |
+                    <a asp-action="Details" asp-route-id="@item.Id"><span class="badge rounded-pill bg-info">Детали</span></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id"><span class="badge rounded-pill bg-danger">Удалить</span></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
